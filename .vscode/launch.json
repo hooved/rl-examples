@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "_python with env",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+            }
+        },
+        {
+            "name": "bbf",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "bbf.train",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+              "--agent=BBF",
+              "--gin_files=bbf/configs/BBF.gin",
+              "--base_dir=/tmp/online_rl/bbf",
+              "--run_number=1",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/repos/google-research:${workspaceFolder}/repos/google-research/bigger_better_faster",
+            }
+        },
+    ],
+}
