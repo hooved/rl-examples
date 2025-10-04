@@ -16,6 +16,7 @@
             "name": "bbf",
             "type": "debugpy",
             "request": "launch",
+            "cwd": "${workspaceFolder}/repos/google-research/bigger_better_faster",
             "module": "bbf.train",
             "console": "integratedTerminal",
             "justMyCode": false,
